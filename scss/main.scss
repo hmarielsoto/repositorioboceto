@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+
+  html {
+    font-size: 62.5%; }
+
+    @media screen and (min-width: 576px) {
+        html {
+          font-size: 100%;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        html {
+          font-size: 90%;
+        }
+      }  
+
+      @media screen and (min-width: 992px) {
+        html {
+          font-size: 50%;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        html {
+          font-size: 50%;
+        }
+      }
+
+//variables
+    $celeste:#5995bd;
+    $blanco: #f7f7f7;
+    $lila: #DC83AD;
+    $gris: #322E31;
+    $arcade: 'VT323', monospace;
+
+//mixin
+
+@mixin titulos {
+    font-family: 'VT323', monospace;
+    color: $blanco;
+    font-size: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin bloques {
+    margin: 20px;
+    padding: 10px;
+    background-color: #CCB9C1;
+    box-shadow: 10px 10px #322E31; 
+}
+
+  
+  body {
+    background-image: url(../img/fondolara.jpg);
+    background-color: black; }
+  
+  h1 {
+    @include titulos;
+    color: #DC83AD;
+    margin: 20px;
+    animation-name: aparecer;
+    animation-duration: 5s; }
+  
+  h2 {
+    @include titulos;
+    margin-bottom: 5px;
+    margin-top: 9px; }
+
+   h3{
+    @include titulos;
+    color: $gris;
+    font-size: 2rem;
+    padding: 5px;
+
+   } 
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  
+  p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    margin: 15px; }
+  
+ 
+//menu
+  
+  nav {
+    display: flex;
+    flex-flow: row wrap; }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #eedbf5; }
+  
+  .nav-item {
+    font-family: 'VT323', monospace;
+    font-size: 3rem; }
+  
+  .nav-link {
+    margin-left: 20px;
+    margin-right: 20px; }
+  
+  .navbar-light .navbar-toggler {
+    color: #eedbf5; }
+  
+  .dropdown-menu {
+    background-color: #212529; }
+  
+  .dropdown-item {
+    color: #eedbf5;
+    font-size: 2rem; }
+  
+//finmenu
+
+.explicacion2 {
+    @include bloques}
+  
+  .explicacion3 {
+    @include bloques}
+  
+  legend {
+    font-family: $arcade;
+    font-size: 2rem; }
+
+ 
+  .foto {
+    margin: 10px; }
+  
+  fieldset {
+    margin: 10px;
+    padding: 5px;
+    background-color: #CCB9C1;
+    color: darkslategrey;
+    box-shadow: 10px 10px grey; }
+  
+  .fotolara {
+    margin: 10px;
+    padding: 10px;
+    background-color: #CCB9C1;
+    box-shadow: 10px 10px grey; }
+
+ .presentacion__item--reel {
+    @extend .fotolara;
+    margin: 20px;
+    padding: 20px;
+    width: 560px;
+    height: 315px;
+    }
+      
+.otrosVideos {
+    @extend .fotolara;
+    padding: 10px;
+    margin: 10px;
+    width: 560px;
+    height: 315px; }
+  
+  .fotocv {
+    margin-top: 30px; }
+  
+  .infoLara {
+    color: #322E31;
+    background-color: #CCB9C1;
+    box-shadow: 10px 10px #322E31;
+    padding: 10px; }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-content: center; }
+  
+  .logo {
+    margin: 15px;
+    animation-name: nombre;
+    animation-duration: 5s; }
+  
+  @keyframes nombre {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+
+//footer
+  
+  footer {
+    background-color: #322E31;
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px; }
+  
+  footer p {
+    color: #ffffff;
+    font-family: $arcade; }
+
+//galeria de fotos
+  
+.fotogaleria{
+    margin:10px;
+}
